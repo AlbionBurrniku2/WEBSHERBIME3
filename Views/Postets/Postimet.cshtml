@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<CSBLOG.Models.Postet>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Postimet</h1>
+@*
+<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <strong>Titulli:</strong> @Html.DisplayFor(modelItem => item.Titulli) <br />
+            <strong>Pershkrimi:</strong> @Html.DisplayFor(modelItem => item.Pershkrimi) <br />
+            <strong>CreatedDate:</strong> @Html.DisplayFor(modelItem => item.CreatedDate) <br />
+            <strong>Autoret:</strong> @Html.DisplayFor(modelItem => item.Autoret) <br />
+
+         @*   <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+        </li>
+    }
+</ul>
